@@ -1,0 +1,27 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feat/issue-396-feat-api-verify-the-reasoning-feed-claim-exists",
+    "feat/issue-416-feat-api-support-api-key-auth-and-key",
+    "fix/issue-422-test-agents-cover-market-creator-threshold",
+    "main",
+    "origin",
+    "security/issue-444-feat-security-bound-field-sizes-on-the-paid"
+  ],
+  "parent": {
+    "feat/issue-396-feat-api-verify-the-reasoning-feed-claim-exists": "main",
+    "feat/issue-416-feat-api-support-api-key-auth-and-key": "main",
+    "fix/issue-422-test-agents-cover-market-creator-threshold": "main",
+    "main": null,
+    "origin": "main",
+    "security/issue-444-feat-security-bound-field-sizes-on-the-paid": "main"
+  },
+  "order": [
+    "main",
+    "feat/issue-396-feat-api-verify-the-reasoning-feed-claim-exists",
+    "feat/issue-416-feat-api-support-api-key-auth-and-key",
+    "fix/issue-422-test-agents-cover-market-creator-threshold",
+    "origin",
+    "security/issue-444-feat-security-bound-field-sizes-on-the-paid"
+  ]
+}
