@@ -17,6 +17,7 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { getReasoningFeed, getClaimById } from "@/lib/db";
+import { apiError } from "@/lib/api/errors";
 import { isReasoningStage, type EvidenceRef } from "@/lib/reasoning/schema";
 import {
   decodeReasoningCursor,
@@ -78,7 +79,11 @@ function parseEvidence(json: string): EvidenceRef[] {
  * the rest of the vs API surface.
  */
 function notFound(): NextResponse {
-  return NextResponse.json({ error: "not_found" }, { status: 404 });
+  const error = apiError("not_found", "Claim not found");
+  return NextResponse.json(error.body, {
+    status: error.status,
+    headers: error.headers,
+  });
 }
 
 export async function GET(
