@@ -264,7 +264,7 @@ function formatUsd(value: number): string {
   return value.toLocaleString("en-US", { maximumFractionDigits: 4 });
 }
 
-function extractUsdThresholds(text: string): number[] {
+export function extractUsdThresholds(text: string): number[] {
   const thresholds: number[] = [];
   const seen = new Set<string>();
   const patterns = [
@@ -295,7 +295,7 @@ function extractUsdThresholds(text: string): number[] {
   return thresholds;
 }
 
-function cryptoThresholdReason(candidate: ClaimCandidate, event: CryptoEvent): string | null {
+export function cryptoThresholdReason(candidate: ClaimCandidate, event: CryptoEvent): string | null {
   if (!Number.isFinite(event.priceUsd) || event.priceUsd <= 0) {
     return `missing live CoinGecko price for ${event.symbol}`;
   }
