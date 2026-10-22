@@ -61,6 +61,6 @@ describe("cryptoThresholdReason", () => {
 
   it("rejects when no threshold is provided", () => {
     const candidate = { thresholds: [] };
-    expect(cryptoThreshordReason(candidate, event)).toBeTruthy();
+    expect(cryptoThresholdReason(candidate, event)).toBeTruthy();
   });
 });
